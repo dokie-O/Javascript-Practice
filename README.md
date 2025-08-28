@@ -1,3 +1,6 @@
 # Javascript-Practice
 # 1. Background Flipper
-A background flipper using functions that contains Math.floor(Math.random())
+A Small JavaScript project that dynamically changes the background color of the webpage. Built to practice working with functions, DOM Manipulation, random numbers.
+## Features
+- Randomly changes background when the button is clicked.
+- Uses `Math.floor()` and `Math.random()` for randomization.
