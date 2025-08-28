@@ -1,2 +1,2 @@
 # Javascript-Practice
-This repository will contain my JavaScript practice
+# 1. Background Flipper
