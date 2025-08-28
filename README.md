@@ -8,3 +8,4 @@ A Small JavaScript project that dynamically changes the background color of the 
 ## How It Works
 ## How to Run
 ## Skills Practiced
+## Improvements
