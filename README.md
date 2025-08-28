@@ -4,3 +4,7 @@ A Small JavaScript project that dynamically changes the background color of the 
 ## Features
 - Randomly changes background when the button is clicked.
 - Uses `Math.floor()` and `Math.random()` for randomization.
+## Screenshots/Gif
+## How It Works
+## How to Run
+## Skills Practiced
