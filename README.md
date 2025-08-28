@@ -5,7 +5,7 @@ A Small JavaScript project that dynamically changes the background color of the 
 - Randomly changes background when the button is clicked.
 - Uses `Math.floor()` and `Math.random()` for randomization.
 ## Gif
-![Background Flipper Demo](Background-Flipper.gif)
+![Background Flipper Demo](assets/Background-Flipper.gif)
 ## How It Works
 ## How to Run
 ## Skills Practiced
