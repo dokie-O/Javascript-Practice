@@ -9,9 +9,9 @@ A small javascript project generating hex value to randomize the website body.
 ![Background Flipper Demo](assets/background-flipper.gif)
 
 ## How It Works
-###1. Hex Color Array
+### 1. Hex Color Array
   - Array is used to store the hex value.
-###2. Random Character Generator
+### 2. Random Character Generator
   - Randomly select letters (a-f) or numbers (0-9) to form the hex value.
   - If/else is used to determine whether a character is a number or letter.
 3. Building the Hex Code
@@ -34,4 +34,5 @@ A small javascript project generating hex value to randomize the website body.
 - Copy/Paste field to get the hex color.
 - Simplified the 3 functions by defining a single string of hex characters (0123456789abcdef) and randomly picking from it.
 - Cleaner event handling by attaching the event in JavaScript. `addEventListener`.
+
 
