@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            #change-background {
+                border: 1px solid #555555;
+                box-shadow: 0px 2px 2px 4px #555555;
+                transition: all 0.2s ease-out;
+            }
+
+            #change-background:hover {
+                transform: translate(0px, -4px);
+                box-shadow: 0px 6px 6px 4px #555555;
+            }
+
+            #change-background:active {
+                transform: translate(0, 4px);
+                box-shadow: 0 0 0 #555555;
+            }
+        </style>
+    </head>
+    <body id="bg-change" style="height: 100vh; place-content: center">
+        <div
+            style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                max-width: 350px;
+                height: 100px;
+                margin-inline: auto;
+                padding: 1vw;
+
+                border-radius: 10px;
+                border: 1px solid black 0px, 4px, 4px, 0;
+                background-color: #0e1111;
+            "
+        >
+            <button
+                onclick="{changeBackground()}"
+                id="change-background"
+                style="
+                    width: 100%;
+                    height: 100%;
+
+                    background-color: #fff;
+                    color: #111;
+                    border-radius: 5px;
+                    padding: 10px;
+                    border: none;
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+                        sans-serif;
+                    font-size: 30px;
+                    cursor: pointer;
+                "
+            >
+                Change Background
+            </button>
+        </div>
+        <script>
+            // Random Number
+            function generateNumber() {
+                let number = Math.floor(Math.random() * 10);
+                return number;
+            }
+
+            // Random Letter
+            function generateLetter() {
+                let char = "";
+                const characters = "abcdef";
+                const charactersLenght = characters.length;
+
+                char = characters.charAt(
+                    Math.floor(Math.random() * charactersLenght)
+                );
+                return char;
+            }
+
+            // Random Number and Letter (0 or 1)
+            function generateRandomCharNum() {
+                let random = Math.floor(Math.random() * 2);
+
+                if (random == 1) {
+                    return generateLetter();
+                } else {
+                    return generateNumber();
+                }
+            }
+
+            // Pushing values into the array using for loop, using "join" to remove comma.
+            function generateHex() {
+                let randomHex = [];
+                const hexLenght = 5;
+
+                for (let i = 0; i <= hexLenght; i++) {
+                    randomHex.push(generateRandomCharNum());
+                }
+
+                return randomHex.join("");
+            }
+
+            // Changing the background using the generated hex
+            let changeBackground = () => {
+                document.body.style.backgroundColor = "#" + generateHex();
+            };
+        </script>
+    </body>
+</html>
