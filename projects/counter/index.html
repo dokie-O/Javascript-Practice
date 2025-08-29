@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Counter</title>
+        <style>
+            /* Utils */
+            .center-flex {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* Button */
+            .button-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                height: 2.5rem;
+                width: 2.5rem;
+
+                border-radius: 2px;
+                background-color: rgb(0, 0, 0);
+            }
+
+            .button-style {
+                height: 2.4rem;
+                width: 2.4rem;
+
+                border-radius: 5px;
+                border: none;
+                padding-inline: 1rem;
+                padding-block: 0.5rem;
+                color: white;
+                cursor: pointer;
+
+                background-color: rgb(111, 33, 53);
+                border: 1px solid rgba(254, 254, 254, 0.119);
+                box-shadow: 4px 4px 8px 0px black,
+                    1px 1px 3px 0.5px rgb(30, 26, 26) inset;
+                transition: all ease-in-out 0.15s;
+            }
+
+            .button-style:active {
+                box-shadow: 0px 0px 0px 0px black,
+                    1px 1px 10px 1px rgb(30, 26, 26) inset;
+                scale: 0.95;
+            }
+        </style>
+    </head>
+    <body style="height: 100vh; place-content: center; background-color: beige">
+        <main
+            class="center-flex"
+            style="
+                height: 250px;
+                width: 350px;
+
+                flex-direction: column;
+                justify-self: center;
+                gap: 1rem;
+                border: 5px solid rgb(111, 33, 53);
+                box-shadow: 0 4px 4px 2px black;
+            "
+        >
+            <section
+                class="center-flex"
+                style="
+                    width: 70%;
+                    height: 50%;
+                    font-family: 'Courier New', Courier, monospace;
+
+                    text-align: center;
+                    margin-inline: auto;
+                    font-size: 75px;
+                    border-radius: 5px;
+                    border: 1px solid rgb(111, 33, 53);
+                    background-color: rgb(255, 255, 255);
+                "
+            >
+                <p id="counter-display">0</p>
+            </section>
+            <section class="center-flex" style="gap: 1rem">
+                <div class="button-container">
+                    <button
+                        id="decrease-counter"
+                        class="button-style center-flex"
+                    >
+                        -
+                    </button>
+                </div>
+                <div class="button-container">
+                    <button id="reset-counter" class="button-style center-flex">
+                        ↻
+                    </button>
+                </div>
+                <div class="button-container">
+                    <button
+                        id="increase-counter"
+                        class="button-style center-flex"
+                    >
+                        +
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            let counter = 0;
+
+            const counterDisplay = document.getElementById("counter-display");
+            const decreaseCounter = document.getElementById("decrease-counter");
+            const resetCounter = document.getElementById("reset-counter");
+            const increaseCounter = document.getElementById("increase-counter");
+
+            function updateDisplay() {
+                counterDisplay.textContent = counter;
+            }
+
+            decreaseCounter.addEventListener("click", () => {
+                counter += -1;
+                updateDisplay();
+            });
+
+            resetCounter.addEventListener("click", () => {
+                counter = 0;
+                updateDisplay();
+            });
+
+            increaseCounter.addEventListener("click", () => {
+                counter += +1;
+                updateDisplay();
+            });
+        </script>
+    </body>
+</html>
