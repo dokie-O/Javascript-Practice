@@ -21,8 +21,6 @@ A small javascript project generating hex value to randomize the website body.
   - The generated hex color code is applied to page's background using `document.body.style.backgroundColor`
   - Each button click will trigger the process, making the background color random each click.
 
-## How to Run
-
 ## Skills Practiced
 - Javascript Functions
 - For loop
@@ -34,6 +32,7 @@ A small javascript project generating hex value to randomize the website body.
 - Copy/Paste field to get the hex color.
 - Simplified the 3 functions by defining a single string of hex characters (0123456789abcdef) and randomly picking from it.
 - Cleaner event handling by attaching the event in JavaScript. `addEventListener`.
+
 
 
 
