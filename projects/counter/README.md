@@ -24,8 +24,6 @@ Increase/Decrement/Reset the count value when the button is clicked.
 
 Show the updated number on the screen immediately.
 
-## How to Run
-
 ## Skills Practiced
 
 -   Event Handler (click)
@@ -35,3 +33,4 @@ Show the updated number on the screen immediately.
 
 -   A way to increase/decrease the count by (1, 5, 10..).
 -   Keyboard controls using arrow key to increment and decrement.
+
