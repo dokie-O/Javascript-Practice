@@ -1,6 +1,6 @@
-# Background Flipper
+# Counter
 
-    A Basic Counter that can be decrease/reset/increase.
+A Basic Counter that can be decrease/reset/increase.
 
 ## Features
 
@@ -33,4 +33,5 @@ Show the updated number on the screen immediately.
 
 -   A way to increase/decrease the count by (1, 5, 10..).
 -   Keyboard controls using arrow key to increment and decrement.
+
 
