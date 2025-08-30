@@ -8,7 +8,6 @@ const choices = {
 const botDisplay = document.getElementById("bot");
 const userDisplay = document.getElementById("user");
 const resultDisplay = document.getElementById("result");
-const botThinking = document.getElementById("bot-thinking");
 
 // Buttons
 const rock = document.getElementById("rock");
@@ -19,16 +18,15 @@ const tryAgain = document.getElementById("try-again-btn");
 // Input declaration
 let userInput = "";
 let botInput = "";
-let botMindThinking = false;
 
 // Display User Input
 function displayUserInput() {
-    userDisplay.innerText = choices[userInput] || "??";
+    userDisplay.innerText = choices[userInput];
 }
 
 // Display Bot Input
 function displayBotInput() {
-    botDisplay.innerText = choices[botInput] || "??";
+    botDisplay.innerText = choices[botInput];
 }
 
 // Returns "rock, paper, scissors" when called
@@ -58,9 +56,13 @@ function hideBtn() {
 tryAgain.addEventListener("click", () => {
     userInput = "";
     botInput = "";
-    botDisplay.innerText = "";
-    userDisplay.innerText = "";
-    resultDisplay.innerText = "";
+    botDisplay.innerText = "?";
+    userDisplay.innerText = "?";
+
+    resultDisplay.innerText = "Good Luck!";
+    resultDisplay.style.color = "black";
+    userDisplay.style.transform = "none";
+    botDisplay.style.transform = "none";
 
     rock.style.display = "inline-block";
     paper.style.display = "inline-block";
@@ -75,11 +77,18 @@ rock.addEventListener("click", () => {
     botRandomInput();
     displayBotInput();
 
+    userDisplay.style.transform = "rotate(90deg)";
+    botDisplay.style.transform = "rotate(-90deg)";
     if (botInput == "scissors") {
         resultDisplay.innerText = "You Win";
+        resultDisplay.style.color = "green";
     } else if (botInput == "rock") {
         resultDisplay.innerText = "Draw";
-    } else resultDisplay.innerText = "You Lose";
+        resultDisplay.style.color = "gray";
+    } else {
+        resultDisplay.innerText = "You Lose";
+        resultDisplay.style.color = "red";
+    }
 
     hideBtn();
 });
@@ -91,11 +100,18 @@ paper.addEventListener("click", () => {
     botRandomInput();
     displayBotInput();
 
+    userDisplay.style.transform = "rotate(90deg)";
+    botDisplay.style.transform = "rotate(-90deg)";
     if (botInput == "rock") {
         resultDisplay.innerText = "You Win";
+        resultDisplay.style.color = "green";
     } else if (botInput == "paper") {
         resultDisplay.innerText = "Draw";
-    } else resultDisplay.innerText = "You Lose";
+        resultDisplay.style.color = "gray";
+    } else {
+        resultDisplay.innerText = "You Lose";
+        resultDisplay.style.color = "red";
+    }
 
     hideBtn();
 });
@@ -107,11 +123,17 @@ scissors.addEventListener("click", () => {
     botRandomInput();
     displayBotInput();
 
+    userDisplay.style.transform = "rotate(90deg)";
+    botDisplay.style.transform = "rotate(-90deg)";
     if (botInput == "paper") {
         resultDisplay.innerText = "You Win";
+        resultDisplay.style.color = "green";
     } else if (botInput == "scissors") {
         resultDisplay.innerText = "Draw";
-    } else resultDisplay.innerText = "You Lose";
-
+        resultDisplay.style.color = "gray";
+    } else {
+        resultDisplay.innerText = "You Lose";
+        resultDisplay.style.color = "red";
+    }
     hideBtn();
 });

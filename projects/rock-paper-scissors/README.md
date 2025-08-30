@@ -1,6 +1,6 @@
-# Rock Paper Scissors Game
+# Background Flipper
 
-Simple rock-paper-scissors
+    Simple rock-paper-scissors
 
 ## Features
 
@@ -15,4 +15,3 @@ Simple rock-paper-scissors
 ## Skills Practiced
 
 ## Room for Improvements
-
