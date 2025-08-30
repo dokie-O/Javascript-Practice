@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    place-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #a5916d;
+    box-shadow: 0 0 4px 2px;
+}
+
+.result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 200px;
+    width: 300px;
+
+    font-size: 100px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 0 0 4px 1px;
+}
+
+.buttons {
+    height: 5rem;
+    width: 5rem;
+
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#try-again-btn {
+    height: 5rem;
+    width: 5rem;
+}
