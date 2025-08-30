@@ -1,6 +1,6 @@
-# Background Flipper
+# Rock-Paper-Scissors Game
 
-    Simple rock-paper-scissors
+Simple rock-paper-scissors
 
 ## Features
 
