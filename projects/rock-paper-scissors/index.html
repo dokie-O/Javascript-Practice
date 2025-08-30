@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rock, Paper, Scissors</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                height: 100vh;
+                place-content: center;
+                justify-items: center;
+                align-items: center;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+                background-color: #a5916d;
+                box-shadow: 0 0 4px 2px;
+            }
+
+            .result-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                height: 200px;
+                width: 300px;
+
+                font-size: 100px;
+                border-radius: 5px;
+                border: 1px solid black;
+                box-shadow: 0 0 4px 1px;
+            }
+
+            .buttons {
+                height: 5rem;
+                width: 5rem;
+
+                font-size: 50px;
+                cursor: pointer;
+            }
+
+            #try-again-btn {
+                height: 5rem;
+                width: 5rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <p id="result" style="font-size: 20px">Beat em up</p>
+
+            <div class="result-container">
+                <div><p id="user"></p></div>
+                <div style="border-left: 1px solid black"><p id="bot"></p></div>
+            </div>
+
+            <div class="user-buttons">
+                <button id="rock" class="buttons">✊</button>
+                <button id="paper" class="buttons">✋</button>
+                <button id="scissors" class="buttons">✌️</button>
+                <button id="try-again-btn" style="display: none">
+                    Try Again
+                </button>
+            </div>
+        </div>
+
+        <script defer>
+            const choices = {
+                rock: "✊",
+                paper: "✋",
+                scissors: "✌️",
+            };
+
+            // Display
+            const botDisplay = document.getElementById("bot");
+            const userDisplay = document.getElementById("user");
+            const resultDisplay = document.getElementById("result");
+            const botThinking = document.getElementById("bot-thinking");
+
+            // Buttons
+            const rock = document.getElementById("rock");
+            const paper = document.getElementById("paper");
+            const scissors = document.getElementById("scissors");
+            const tryAgain = document.getElementById("try-again-btn");
+
+            // Input declaration
+            let userInput = "";
+            let botInput = "";
+            let botMindThinking = false;
+
+            // Display User Input
+            function displayUserInput() {
+                userDisplay.innerText = choices[userInput] || "??";
+            }
+
+            // Display Bot Input
+            function displayBotInput() {
+                botDisplay.innerText = choices[botInput] || "??";
+            }
+
+            // Returns "rock, paper, scissors" when called
+            function botRandomInput() {
+                let randomNumber;
+                // Random number generator (0-2)
+                randomNumber = Math.floor(Math.random() * 3);
+
+                // 0 = rock, 1 = paper, 2 = scissors
+                if (randomNumber == 0) {
+                    botInput = "rock";
+                } else if (randomNumber == 1) {
+                    botInput = "paper";
+                } else {
+                    botInput = "scissors";
+                }
+            }
+
+            function hideBtn() {
+                rock.style.display = "none";
+                paper.style.display = "none";
+                scissors.style.display = "none";
+                tryAgain.style.display = "inline-block";
+            }
+
+            // Reset & Show Buttons
+            tryAgain.addEventListener("click", () => {
+                userInput = "";
+                botInput = "";
+                botDisplay.innerText = "";
+                userDisplay.innerText = "";
+                resultDisplay.innerText = "";
+
+                rock.style.display = "inline-block";
+                paper.style.display = "inline-block";
+                scissors.style.display = "inline-block";
+                tryAgain.style.display = "none";
+            });
+
+            // Rock Button
+            rock.addEventListener("click", () => {
+                userInput = "rock";
+                displayUserInput();
+                botRandomInput();
+                displayBotInput();
+
+                if (botInput == "scissors") {
+                    resultDisplay.innerText = "You Win";
+                } else if (botInput == "rock") {
+                    resultDisplay.innerText = "Draw";
+                } else resultDisplay.innerText = "You Lose";
+
+                hideBtn();
+            });
+
+            // Paper Button
+            paper.addEventListener("click", () => {
+                userInput = "paper";
+                displayUserInput();
+                botRandomInput();
+                displayBotInput();
+
+                if (botInput == "rock") {
+                    resultDisplay.innerText = "You Win";
+                } else if (botInput == "paper") {
+                    resultDisplay.innerText = "Draw";
+                } else resultDisplay.innerText = "You Lose";
+
+                hideBtn();
+            });
+
+            // Scissors Button
+            scissors.addEventListener("click", () => {
+                userInput = "scissors";
+                displayUserInput();
+                botRandomInput();
+                displayBotInput();
+
+                if (botInput == "paper") {
+                    resultDisplay.innerText = "You Win";
+                } else if (botInput == "scissors") {
+                    resultDisplay.innerText = "Draw";
+                } else resultDisplay.innerText = "You Lose";
+
+                hideBtn();
+            });
+        </script>
+    </body>
+</html>
