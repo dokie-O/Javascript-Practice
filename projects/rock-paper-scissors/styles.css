@@ -16,8 +16,10 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+
     padding: 1rem;
     height: 325px;
+
     background-color: #1e1e1e;
     box-shadow: 0 0 4px 2px, 0 0 5px 0.1px white inset;
     border: 10px double rgba(65, 65, 65, 0.5);
@@ -48,17 +50,10 @@ body {
     font-size: 100px;
 }
 
-/* #user {
-    transform: rotate(90deg);
-}
-
-#bot {
-    transform: rotate(-90deg);
-} */
-
 .user-buttons {
     display: flex;
     width: 100%;
+    transform: rotate();
 }
 
 .buttons {
