@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik+Mono+One&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    place-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+    height: 325px;
+
+    background-color: #1e1e1e;
+    box-shadow: 0 0 4px 2px, 0 0 5px 0.1px white inset;
+    border: 10px double rgba(65, 65, 65, 0.5);
+}
+
+.result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 200px;
+    width: 300px;
+
+    gap: 20px;
+    border-radius: 5px;
+}
+
+.input-container {
+    flex: 1;
+    text-align: center;
+    border-radius: 2px;
+    background-color: rgb(214, 214, 214);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5) inset;
+}
+
+#user,
+#bot {
+    font-size: 100px;
+}
+
+.user-buttons {
+    display: flex;
+    width: 100%;
+    transform: rotate();
+}
+
+.buttons {
+    flex: 1;
+    height: 5rem;
+    width: 5rem;
+
+    margin: 10px;
+    font-size: 50px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 2px 1px 2px white, 0 0 10px 0.5px rgb(102, 102, 102) inset;
+}
+
+.buttons:hover {
+    scale: 0.9;
+    box-shadow: 0 0 0 0, 0 0 10px 0.5px rgb(102, 102, 102) inset;
+}
+
+#try-again-btn {
+    height: 5rem;
+    width: 100%;
+    cursor: pointer;
+    font-size: 25px;
+    background-color: rgb(54, 83, 10);
+    color: rgb(223, 223, 223);
+    border-radius: 3px;
+    border: none;
+    font-family: "Rubik Mono One", monospace;
+    transition: all ease-in-out 0.3s;
+}
+
+#try-again-btn:hover {
+    box-shadow: 0 1px 4px 1px rgba(26, 59, 11, 0.568),
+        0 0 10px 2px rgba(11, 97, 20, 0.568) inset;
+    font-size: 26px;
+}
+
+#result {
+    text-align: center;
+    width: 100%;
+    font-family: "Rubik Mono One", monospace;
+    font-size: 30px;
+    color: white;
+    background-color: white;
+    box-shadow: 3px 1px 10px 2px inset;
+}
