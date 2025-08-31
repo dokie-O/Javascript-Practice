@@ -35,4 +35,5 @@ The player competes against a random bot choice, and the result is displayed imm
 -   Add sound effects when clicking
 -   Show history of previous rounds
 -   Add countdown animation before reveal
+-   Reduce repeat if/else by creating a function
 
