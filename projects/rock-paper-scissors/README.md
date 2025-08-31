@@ -1,17 +1,37 @@
 # Rock-Paper-Scissors Game
 
-Simple rock-paper-scissors
+A simple interactive **Rock-Paper-Scissors** game built with **HTML, CSS, and JavaScript**.  
+The player competes against a random bot choice, and the result is displayed immediately.
 
-## Features
+## 🎮 Features
 
-## GIF
+-   Play Rock ✊, Paper ✋, or Scissors ✌️
+-   Randomized bot opponent
+-   Result display (`Win / Lose / Draw`)
+-   Reset button ("Try Again")
 
-![Counter Demo](assets/rock_paper_scissors.gif)
+## 📸 Demo
 
-## How It Works
+![Game Demo](assets/rock-paper-scissors.gif)
 
-#### 1. Initializing the count variable
+## ⚙️ How It Works
 
-## Skills Practiced
+1. Player clicks one of the choice buttons (✊ / ✋ / ✌️).
+2. The bot randomly selects its move.
+3. Both choices are displayed.
+4. Result text updates with green (win), red (lose), or gray (draw).
+5. The "Try Again" button resets the game.
 
-## Room for Improvements
+## 🛠️ Skills Practiced
+
+-   DOM Manipulation (query selectors, event listeners)
+-   Random number generation
+-   Game logic implementation
+-   CSS transforms & styling
+
+## 🚀 Room for Improvements
+
+-   Add score tracking (Player vs Bot)
+-   Add sound effects when clicking
+-   Show history of previous rounds
+-   Add countdown animation before reveal
