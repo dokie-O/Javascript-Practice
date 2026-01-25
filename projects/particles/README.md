@@ -4,14 +4,14 @@
 A multiple particle with random velocity bouncing inside a container. This project is design to understand velocity in animations. 
 
 ##  Key Concepts Explained
-##Position
+# Position
   - `posX`, `posY` represent the starting position of the particle.
   - These values will get updated using:
     ```js 
     posX = posX + velX;
     posY = posY + velY;
     ```
-##Velocity
+# Velocity
   - Represents the speed and in what direction the particle moves.
   - positive value = moving to the right/down
   - negative value = moving to the left/up
@@ -19,7 +19,7 @@ A multiple particle with random velocity bouncing inside a container. This proje
     let velX = (Math.random() - 0.5) * 5;
     let velY = (Math.random() - 0.5) * 5;
     ```
-##Bouncing Logic
+# Bouncing Logic
   - Velocity is reversed when hitting the wall.
     ```js 
     if (posX <= 0 || posX >= 275) {
