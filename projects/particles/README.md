@@ -10,6 +10,7 @@ A multiple particle with random velocity bouncing inside a container. This proje
     ```js 
     posX = posX + velX;
     posY = posY + velY;
+    ```
 #Velocity
   - Represents the speed and in what direction the particle moves.
   positive value = moving to the right/down
@@ -17,6 +18,7 @@ A multiple particle with random velocity bouncing inside a container. This proje
     ```js 
     let velX = (Math.random() - 0.5) * 5;
     let velY = (Math.random() - 0.5) * 5;
+    ```
 #Bouncing Logic
   - Velocity is reversed when hitting the wall.
     ```js 
@@ -26,6 +28,7 @@ A multiple particle with random velocity bouncing inside a container. This proje
     if (posY <= 0 || posY >= 275) {
         velY *= -1;
     }
+    ```
     - This works because velocity already knows the direction.
     - Flipping the sign reverse the movement naturally.
   
