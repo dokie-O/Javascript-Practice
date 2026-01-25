@@ -13,8 +13,8 @@ A multiple particle with random velocity bouncing inside a container. This proje
     ```
 #Velocity
   - Represents the speed and in what direction the particle moves.
-  positive value = moving to the right/down
-  negative value = moving to the left/up
+  - positive value = moving to the right/down
+  - negative value = moving to the left/up
     ```js 
     let velX = (Math.random() - 0.5) * 5;
     let velY = (Math.random() - 0.5) * 5;
