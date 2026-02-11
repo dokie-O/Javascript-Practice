@@ -8,3 +8,4 @@
 | 2 | [Counter](projects/counter) | Basic counter using button event handler to increase/decrease/reset the count. | ![GIF](projects/counter/assets/counter.gif) |
 | 3 | [Rock, Paper, Scissors Game](projects/rock-paper-scissors) | A simple interactive **Rock-Paper-Scissors** game built with **HTML, CSS, and JavaScript**.  The player competes against a random bot choice, and the result is displayed immediately. | ![GIF](projects/rock-paper-scissors/assets/rock-paper-scissors.gif) |
 | 4 | [Particles](projects/particles) | Particles with velocity to illustrate basic bouncing menchanics | ![GIF](projects/particles/assets/particles.gif) |
+| 5 | [Tic-Tac-Toe](projects/tic-tac-toe) | Basic Tic-Tac-Toe Game | ![GIF](projects/particles/assets/tic-tac-toe.gif) |
