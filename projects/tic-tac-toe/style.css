@@ -1,0 +1,96 @@
+* {
+    font-family: "Press Start 2P", system-ui;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    place-content: center;
+
+    /* background-color: #040200; */
+}
+
+#board {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    padding: 1rem;
+    /* border: 1px solid red; */
+}
+
+#board button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100px;
+    width: 100px;
+    font-size: 80px;
+    box-shadow: 0px 0px 5px 1px black inset;
+    cursor: pointer;
+    border: 3px solid black;
+}
+
+#winner-dialog {
+    display: none;
+    text-align: center;
+
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+#reset-btn {
+    font-size: 2rem;
+    height: fit-content;
+    width: 100%;
+    background-color: yellow;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 3px black inset;
+    border: none;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    filter: blur(5px);
+}
+
+@media only screen and (max-width: 500px) {
+    #board {
+        grid-template-columns: repeat(3, 75px);
+        padding: 0.5rem;
+        width: fit-content;
+        margin: auto;
+    }
+
+    #board button {
+        height: 75px;
+        width: 75px;
+        font-size: 60px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
